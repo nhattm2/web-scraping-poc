@@ -2,6 +2,20 @@
 
 Dự án này cung cấp một script Node.js sử dụng Playwright để lấy nhanh thông tin thời tiết từ một trang web công khai (timeanddate.com).
 
+## Request mẫu để test nhanh (curl)
+- Health check:
+```bash
+curl http://localhost:3000/
+```
+- Scrape theo country/city:
+```bash
+curl "http://localhost:3000/api/scrape?country=vietnam&city=ho-chi-minh-city"
+```
+- Scrape theo URL trực tiếp:
+```bash
+curl "http://localhost:3000/api/scrape?url=https://www.timeanddate.com/weather/vietnam/hanoi"
+```
+
 ## Yêu cầu
 - Node.js 16+
 - Truy cập Internet
