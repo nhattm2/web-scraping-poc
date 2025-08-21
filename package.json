@@ -1,0 +1,29 @@
+{
+  "name": "weather-scraper-playwright",
+  "version": "1.0.0",
+  "description": "Simple weather scraper using Playwright in Node.js",
+  "main": "src/scrape-weather.js",
+  "type": "commonjs",
+  "scripts": {
+    "preinstall": "node -v > /dev/null 2>&1 || echo 'Node.js required'",
+    "postinstall": "npx playwright install chromium",
+    "start": "node src/server.js",
+    "scrape": "node src/scrape-weather.js",
+    "scrape:example": "node src/scrape-weather.js --country vietnam --city ho-chi-minh-city"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "playwright": "^1.46.0",
+    "yargs": "^17.7.2"
+  },
+  "keywords": [
+    "scrape",
+    "weather",
+    "playwright",
+    "node"
+  ],
+  "license": "MIT"
+}
